@@ -11,66 +11,12 @@
 		
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 	    <title>BeachHacks Official Site™</title>
-	    <link rel="stylesheet" type="text/css" href="./css/lain_site.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	    <link rel="stylesheet" type="text/css" href="./css/lain_site.css">
 		
 		<!--
 		<link type="text/css" rel="stylesheet" media="screen and (max-width: 800px)" href="https://fauux.neocities.org/stylesheetU800px.css">
 		-->
-		<style>
-		html {
-				height: 100%;
-			}
-			
-			body {
-				height: 600%;
-			}
-			
-			#shadow {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				pointer-events: none;
-				z-index: -100;
-			}
-		</style>
-		<script>
-			window.addEventListener("load", function() {
-				document.body.className = "";
-				var scroll = 0;
-				window.addEventListener("scroll", function(event) {
-				/*	scroll = Math.min(document.body.parentElement.scrollTop / (window.innerHeight * 5), 1); */
-					update({});
-				});
-				
-				var lastX = -1000;
-				var lastY = -1000;
-				
-				function update(e) {
-					
-					var x = e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : lastX);
-					var y = e.clientY || (e.touches && e.touches[0] ? e.touches[0].clientY : lastY);
-					lastX = x;
-					lastY = y;
-					
-					document.getElementById("shadow").style.background = "radial-gradient(circle 10vmax at " + x + "px " + y + "px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, " + scroll + ") 100% )";
-				}
-				
-				update({});
-				
-				window.addEventListener("mousemove", update);
-				window.addEventListener("touchmove", update);
-				
-				setInterval(function() {
-					document.body.style.backgroundPosition = document.body.style.backgroundPosition ? "" : "50% 50%";
-				}, 1000 / 60);
-			});
-			window.addEventListener("beforeunload", function() {
-			  window.scrollTo(0, 0);
-			});
-		</script>
 	</head>
 	<body>
 		<div class="article">
@@ -99,17 +45,17 @@
 			
 			<button class="button" onclick="increaseFont()">Increase Font</button>
 			<button class="button" onclick="document.getElementById('paragraph1').style.display = 'none'">Make it go away</button>
-			<button class="button" onclick="document.getElementById('paragraph1').style.display = 'block'">Make come back</button>
+			<button class="button" onclick="document.getElementById('paragraph1').style.display = 'block'">Make it come back</button>
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 				MAP
 			</button>
 			
 			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
+			  <div class="modal-dialog modal-lg" role="document">
 				<div class="modal-content">
 				  
 				  <div class="modal-body">
-						<iframe src="map.html"></iframe>
+						<iframe class="frame" src="map.html"></iframe>
 				  </div>
 				  <div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

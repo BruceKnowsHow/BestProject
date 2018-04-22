@@ -59,7 +59,7 @@
 	}
 	
 body {
-/*	background-image:url(https://fauux.neocities.org/bg/bg_main2.gif); */
+	background-image:url(https://fauux.neocities.org/bg/bg_main2.gif);
 	background-color:#d9ffcc;!important;
 	color:#c1b492;	
 
@@ -118,7 +118,10 @@ a:hover {
 	}
 	
 	
-
+.frame {
+	height:750px;
+	width:750px;
+}
 	
 .article p {
 	margin:20px;
