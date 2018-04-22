@@ -12,7 +12,7 @@
 	}
 	
 body {
-	background-color:#75ff46;
+	background-color:#d9ffcc;
 	color:#c1b492;	
 
 	
@@ -150,6 +150,10 @@ hr {
 
 	
 	}
+	
+.dopplers {
+	display:none;
+}
 	
 .date {
 	font-size:9px;

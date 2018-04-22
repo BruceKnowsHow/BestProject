@@ -41,18 +41,44 @@
 			<button onclick="document.getElementById('paragraph1').style.fontSize = '20px'">Increase Font</button>
 			<button onclick="document.getElementById('paragraph1').style.display = 'none'">Make it go away</button>
 			<button onclick="document.getElementById('paragraph1').style.display = 'block'">Make come back</button>
+			
+			<script>
+				function play1(){
+					var audio = document.getElementById("song1");
+					
+					setTimeout(alert(""), 2000);
+					setTimeout(song1.play(), 2000);
+				}
+				
+				function sayHi() {
+					alert('Hello');
+				}
+				
+				function sayHiHi() {
+					document.getElementById('paragraph1').style.display = 'none';
+				}
+				
+				function showBalls() {
+					document.getElementsByClassName('dopplers').style.display = 'block';
+				}
+				
+				setTimeout(sayHiHi, 2000);
+				setTimeout(showBalls, 2000);
+		   </script>
+		   
+		   <input type="button" value="PLAY" onclick="play1()">
 		</div>
 		
 		<div class="article">
 			hey </p>
 			<br>
-			<img id="pic1" src="./images/drop1.gif" height="100" width="100"> </img>
-			<img id="pic2" src="./images/drop1.gif" height="100" width="100"> </img>
-			<img id="pic3" src="./images/drop1.gif" height="100" width="100"> </img>
-			<img id="pic4" src="./images/drop1.gif" height="100" width="100"> </img>
-			<img id="pic5" src="./images/drop1.gif" height="100" width="100"> </img>
-			<img id="pic6" src="./images/drop1.gif" height="100" width="100"> </img>
-			<img id="pic7" src="./images/drop1.gif" height="100" width="100"> </img>
+			<img class="dopplers" id="pic1" src="./images/drop1.gif" height="100" width="100"> </img>
+			<img class="dopplers" id="pic2" src="./images/drop1.gif" height="100" width="100"> </img>
+			<img class="dopplers" id="pic3" src="./images/drop1.gif" height="100" width="100"> </img>
+			<img class="dopplers" id="pic4" src="./images/drop1.gif" height="100" width="100"> </img>
+			<img class="dopplers" id="pic5" src="./images/drop1.gif" height="100" width="100"> </img>
+			<img class="dopplers" id="pic6" src="./images/drop1.gif" height="100" width="100"> </img>
+			<img class="dopplers" id="pic7" src="./images/drop1.gif" height="100" width="100"> </img>
 			
 			<button onclick="document.getElementById('pic1').src='./images/drop2.gif'">Turn off the light</button>
 			<button onclick="document.getElementById('pic4').src='./images/drop2.gif'">Turn off the light</button>
@@ -67,7 +93,7 @@
 		<!-- Scripts (JavaScript) -->
 		<script src="./js/script.js"></script>
 		
-		<audio controls autoplay="">
+		<audio id="song1" controls>
 			<source src="./audio/song1.mp3" type="audio/mp3">
 		</audio>
 	</body>
