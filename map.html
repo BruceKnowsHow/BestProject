@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Meta Data -->
+	    <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="name">
+		<meta name="description" content="description here">
+		<meta name="keywords" content="keywords,here">
+		<!-- End Meta Data -->
+		
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+	    <title>Map™</title>
+	    <link rel="stylesheet" type="text/css" href="./css/lain_site.css">
+		<!--
+		<link type="text/css" rel="stylesheet" media="screen and (max-width: 800px)" href="https://fauux.neocities.org/stylesheetU800px.css">
+		-->
+		
+		<style>
+		html {
+				height: 100%;
+			}
+			
+			body {
+				height: 600%;
+			}
+			
+			#shadow {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+				z-index: 1000;
+			}
+		</style>
+		<script>
+			window.addEventListener("load", function() {
+				document.body.className = "";
+				var scroll = 1;
+				window.addEventListener("scroll", function(event) {
+					update({});
+				});
+				
+				var lastX = -1000;
+				var lastY = -1000;
+				
+				function update(e) {
+					
+					var x = e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : lastX);
+					var y = e.clientY || (e.touches && e.touches[0] ? e.touches[0].clientY : lastY);
+					lastX = x;
+					lastY = y;
+					
+					document.getElementById("shadow").style.background = "radial-gradient(circle 10vmax at " + x + "px " + y + "px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, " + scroll + ") 100% )";
+				}
+				
+				update({});
+				
+				window.addEventListener("mousemove", update);
+				window.addEventListener("touchmove", update);
+				
+				setInterval(function() {
+					document.body.style.backgroundPosition = document.body.style.backgroundPosition ? "" : "50% 50%";
+				}, 1000 / 60);
+			});
+			window.addEventListener("beforeunload", function() {
+			  window.scrollTo(0, 0);
+			});
+		</script>
+	</head>
+	<body>
+		<div class= "article" >
+			<img class="map" src="./images/map.png"/ height="750" width="750">
+			<br>
+			<br>
+		</div>
+		
+		<div id="shadow"/>
+		
+	</body>
+</html>

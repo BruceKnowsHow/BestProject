@@ -31,7 +31,7 @@
 				width: 100%;
 				height: 100%;
 				pointer-events: none;
-				z-index: 1000;
+				z-index: -100;
 			}
 		</style>
 		<script>
@@ -39,7 +39,7 @@
 				document.body.className = "";
 				var scroll = 0;
 				window.addEventListener("scroll", function(event) {
-					scroll = Math.min(document.body.parentElement.scrollTop / (window.innerHeight * 5), 1);
+				/*	scroll = Math.min(document.body.parentElement.scrollTop / (window.innerHeight * 5), 1); */
 					update({});
 				});
 				
@@ -107,7 +107,6 @@
 		</div>
 		
 		<div class= "article" >
-			hey </p>
 			<br>
 			<img class="dopplers" id="pic1" src="./images/drop1.gif" height="100" width="100"> </img>
 			<img class="dopplers" id="pic2" src="./images/drop1.gif" height="100" width="100"> </img>
@@ -126,24 +125,43 @@
 	
 		
 		<div class="content-wrapper" id="main-wrapper">
-			<ul>
-				<p>  </p>
-			</ul>	
-			<p> Music: 
-				<audio id="song1" controls>
-				<source src="./audio/song1.mp3" type="audio/mp3">
-				</audio>
-			</p>
-
 		</div>
 		<!-- Scripts (JavaScript) -->
 		<script src="./js/script.js"></script>
 		
-		<audio id="song1" controls>
-			<source src="./audio/song1.mp3" type="audio/mp3">
-		</audio>
-		
 		<div id="shadow"></div>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 		
 		<div class="ring">
 			<img src="./images/ring0.png" class="ring0">
@@ -160,78 +178,71 @@
 		
 		<style>
 		.ring {
-			text-align:center;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			align-content: center;
 		}
 		
 		img.ring0 {
 			-webkit-animation: spinreverse 120s infinite linear;
 			position: absolute;
-			top: 1080;
-			left: 0;
+			z-index: 1;
 		}
 		
 		img.ring1 {
 			-webkit-animation: spinreverse 100s infinite linear;
 			position: absolute;
-			top: 1080;
-			left: 0;
+			z-index: 2;
 			
 		}
 		
 		img.ring2 {
 			-webkit-animation: spinreverse 90s infinite linear;
 			position: absolute;
-			top: 1080;
-			left: 0;
+			z-index: 3;
 		}
 		
 		img.ring3 {
 			-webkit-animation: spinreverse 80s infinite linear;
 			position: absolute;
-			top: 1080;
-			left: 0;
+			z-index: 4;
 		}
 		
 		img.ring4 {
 			-webkit-animation: spinreverse 70s infinite linear;
 			position: absolute;
-			top: 1080;
-			left: 0;
+			z-index: 5;
 		}
 		
 		img.ring5 {
 			-webkit-animation: spinreverse 60s infinite linear;
 			position: absolute;
-			top: 1080;
-			left: 0;
+			z-index: 6;
 		}
 		
 		img.ring6 {
 			-webkit-animation: spinreverse 50s infinite linear;
 			position: absolute;
-			top: 1080;
-			left: 0;
+			z-index: 7;
 		}
 		
 		img.ring7 {
 			-webkit-animation: spinreverse 40s infinite linear;
 			position: absolute;
-			top: 1080;
-			left: 0;
+			z-index: 8;
 		}
 		
 		img.ring8 {
 			-webkit-animation: spinreverse 30s infinite linear;
 			position: absolute;
-			top: 1080;
-			left: 0;
+			z-index: 9;
 		}
 		
 		img.ring9 {
 			-webkit-animation: spinreverse 20s infinite linear;
 			position: absolute;
-			top: 1080;
-			left: 0;
+			z-index: 10;
 		}
 		
 		
