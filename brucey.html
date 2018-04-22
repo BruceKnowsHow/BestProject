@@ -37,9 +37,9 @@
 		<script>
 			window.addEventListener("load", function() {
 				document.body.className = "";
-				var scroll = 0;
+				var scroll = 1000;
 				window.addEventListener("scroll", function(event) {
-					scroll = Math.min(document.body.parentElement.scrollTop / (window.innerHeight * 5), 1);
+				/*	scroll = Math.min(document.body.parentElement.scrollTop / (window.innerHeight * 5), 1); */
 					update({});
 				});
 				
@@ -55,8 +55,6 @@
 					
 					document.getElementById("shadow").style.background = "radial-gradient(circle 10vmax at " + x + "px " + y + "px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, " + scroll + ") 100% )";
 				}
-				
-				scroll = lastY;
 				
 				update({});
 				
