@@ -60,11 +60,12 @@
 	
 body {
 /*	background-image:url(https://fauux.neocities.org/bg/bg_main2.gif); */
-	background-color:#d9ffcc;
+	background-color:#d9ffcc;!important;
 	color:#c1b492;	
 
 	
-	}
+}
+
 	
 a {
 	text-decoration:none;
