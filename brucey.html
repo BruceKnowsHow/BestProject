@@ -38,7 +38,7 @@
 				Welcome to Beachhacks! </p>
 			</div>
 			
-			<button onclick="document.getElementById('paragraph1').style.fontSize = '20px'">Increase Font</button>
+			<button onclick="increaseFont()">Increase Font</button>
 			<button onclick="document.getElementById('paragraph1').style.display = 'none'">Make it go away</button>
 			<button onclick="document.getElementById('paragraph1').style.display = 'block'">Make come back</button>
 			
@@ -61,9 +61,6 @@
 				function showBalls() {
 					document.getElementsByClassName('dopplers').style.display = 'block';
 				}
-				
-				setTimeout(sayHiHi, 2000);
-				setTimeout(showBalls, 2000);
 		   </script>
 		   
 		   <input type="button" value="PLAY" onclick="play1()">
