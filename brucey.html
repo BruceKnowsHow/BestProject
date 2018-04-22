@@ -42,30 +42,12 @@
 			<button class="button" onclick="increaseFont()">Increase Font</button>
 			<button class="button" onclick="document.getElementById('paragraph1').style.display = 'none'">Make it go away</button>
 			<button class="button" onclick="document.getElementById('paragraph1').style.display = 'block'">Make come back</button>
+			<button class="button" id="mapID" onclick="map()"> MAP</button>
 			
-			<script>
 			
-				function play1(){
-					var audio = document.getElementById("song1");
-					
-					setTimeout(alert(""), 2000);
-					setTimeout(song1.play(), 2000);
-				}
-				
-				function sayHi() {
-					alert('Hello');
-				}
-				
-				function sayHiHi() {
-					document.getElementById('paragraph1').style.display = 'none';
-				}
-				
-				function showBalls() {
-					document.getElementsByClassName('dopplers').style.display = 'block';
-				}
-		   </script>
+			
+		  
 		   
-		   <input type="button" value="PLAY" onclick="play1()">
 		</div>
 		
 		<div class= "article" >
@@ -89,14 +71,18 @@
 		
 		<div class="content-wrapper" id="main-wrapper">
 			<ul>
-				<p> hey </p>
-			</ul>			
+				<p>  </p>
+			</ul>	
+			<p> Music: 
+				<audio id="song1" controls>
+				<source src="./audio/song1.mp3" type="audio/mp3">
+				</audio>
+			</p>
+
 		</div>
 		<!-- Scripts (JavaScript) -->
 		<script src="./js/script.js"></script>
 		
-		<audio id="song1" controls>
-			<source src="./audio/song1.mp3" type="audio/mp3">
-		</audio>
+		
 	</body>
 </html>

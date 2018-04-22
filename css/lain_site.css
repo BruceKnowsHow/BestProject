@@ -4,6 +4,12 @@
 	background-color: black;
 }
 
+.content-wrapper p{
+	width: 10opx;
+    height: 100px;
+}
+	
+
 .slidecontainer {
     width: 100%;
 }
@@ -377,3 +383,5 @@ b {
 	  text-shadow:#c1b492 1px 1px 6px;
 	  }
  }
+ 
+ 
