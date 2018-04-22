@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* CSS Document */
+#button{
+	background-color: black;
+}
+
 .slidecontainer {
     width: 100%;
 }
@@ -180,6 +184,22 @@ hr {
 
 	
 	}
+	
+.article>.button {
+	color: white;
+	border-radius: 2px;
+	background-color: black;
+	width: 150px;
+    height: 40px;  
+	box-shadow:black 2px 5px 5px;
+	text-align:center;
+	letter-spacing:3px;
+	font-size:10px;
+	padding-top:10px;
+
+	
+	}
+	
 	
 
 	
