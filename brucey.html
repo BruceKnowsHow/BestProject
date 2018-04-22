@@ -12,7 +12,65 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 	    <title>BeachHacks Official Site™</title>
 	    <link rel="stylesheet" type="text/css" href="./css/lain_site.css">
+		<!--
 		<link type="text/css" rel="stylesheet" media="screen and (max-width: 800px)" href="https://fauux.neocities.org/stylesheetU800px.css">
+		-->
+		<style>
+		html {
+				height: 100%;
+			}
+			
+			body {
+				height: 600%;
+			}
+			
+			#shadow {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+				z-index: 1000;
+			}
+		</style>
+		<script>
+			window.addEventListener("load", function() {
+				document.body.className = "";
+				var scroll = 0;
+				window.addEventListener("scroll", function(event) {
+					scroll = Math.min(document.body.parentElement.scrollTop / (window.innerHeight * 5), 1);
+					update({});
+				});
+				
+				var lastX = -1000;
+				var lastY = -1000;
+				
+				function update(e) {
+					
+					var x = e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : lastX);
+					var y = e.clientY || (e.touches && e.touches[0] ? e.touches[0].clientY : lastY);
+					lastX = x;
+					lastY = y;
+					
+					document.getElementById("shadow").style.background = "radial-gradient(circle 10vmax at " + x + "px " + y + "px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, " + scroll + ") 100% )";
+				}
+				
+				scroll = lastY;
+				
+				update({});
+				
+				window.addEventListener("mousemove", update);
+				window.addEventListener("touchmove", update);
+				
+				setInterval(function() {
+					document.body.style.backgroundPosition = document.body.style.backgroundPosition ? "" : "50% 50%";
+				}, 1000 / 60);
+			});
+			window.addEventListener("beforeunload", function() {
+			  window.scrollTo(0, 0);
+			});
+		</script>
 	</head>
 	<body>
 		<div class="article">
@@ -96,5 +154,105 @@
 		<audio id="song1" controls>
 			<source src="./audio/song1.mp3" type="audio/mp3">
 		</audio>
+		
+		<div id="shadow"></div>
+		
+		<div class="ring">
+			<img src="./images/ring0.png" class="ring0">
+			<img src="./images/ring1.png" class="ring1">
+			<img src="./images/ring2.png" class="ring2">
+			<img src="./images/ring3.png" class="ring3">
+			<img src="./images/ring4.png" class="ring4">
+			<img src="./images/ring5.png" class="ring5">
+			<img src="./images/ring6.png" class="ring6">
+			<img src="./images/ring7.png" class="ring7">
+			<img src="./images/ring8.png" class="ring8">
+			<img src="./images/ring9.png" class="ring9">
+		</div>
+		
+		<style>
+		.ring {
+			text-align:center;
+		}
+		
+		img.ring0 {
+			-webkit-animation: spinreverse 120s infinite linear;
+			position: absolute;
+			top: 1080;
+			left: 0;
+		}
+		
+		img.ring1 {
+			-webkit-animation: spinreverse 100s infinite linear;
+			position: absolute;
+			top: 1080;
+			left: 0;
+			
+		}
+		
+		img.ring2 {
+			-webkit-animation: spinreverse 90s infinite linear;
+			position: absolute;
+			top: 1080;
+			left: 0;
+		}
+		
+		img.ring3 {
+			-webkit-animation: spinreverse 80s infinite linear;
+			position: absolute;
+			top: 1080;
+			left: 0;
+		}
+		
+		img.ring4 {
+			-webkit-animation: spinreverse 70s infinite linear;
+			position: absolute;
+			top: 1080;
+			left: 0;
+		}
+		
+		img.ring5 {
+			-webkit-animation: spinreverse 60s infinite linear;
+			position: absolute;
+			top: 1080;
+			left: 0;
+		}
+		
+		img.ring6 {
+			-webkit-animation: spinreverse 50s infinite linear;
+			position: absolute;
+			top: 1080;
+			left: 0;
+		}
+		
+		img.ring7 {
+			-webkit-animation: spinreverse 40s infinite linear;
+			position: absolute;
+			top: 1080;
+			left: 0;
+		}
+		
+		img.ring8 {
+			-webkit-animation: spinreverse 30s infinite linear;
+			position: absolute;
+			top: 1080;
+			left: 0;
+		}
+		
+		img.ring9 {
+			-webkit-animation: spinreverse 20s infinite linear;
+			position: absolute;
+			top: 1080;
+			left: 0;
+		}
+		
+		
+		@-webkit-keyframes spinreverse {
+			0%  {-webkit-transform: rotate(-360deg);}
+			100% {-webkit-transform: rotate(0deg);}   
+		}
+</style>
+		</style>
+		
 	</body>
 </html>
