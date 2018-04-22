@@ -39,7 +39,7 @@
 				document.body.className = "";
 				var scroll = 1000;
 				window.addEventListener("scroll", function(event) {
-				/*	scroll = Math.min(document.body.parentElement.scrollTop / (window.innerHeight * 5), 1); */
+					scroll = Math.min(document.body.parentElement.scrollTop / (window.innerHeight * 5), 1);
 					update({});
 				});
 				
