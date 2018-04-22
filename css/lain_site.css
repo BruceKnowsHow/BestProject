@@ -1,5 +1,15 @@
 @charset "UTF-8";
 /* CSS Document */
+#button{
+	background-color: black;
+}
+
+.content-wrapper p{
+	width: 10opx;
+    height: 100px;
+}
+	
+
 .slidecontainer {
     width: 100%;
 }
@@ -76,7 +86,7 @@ a:hover {
 	
 .article {
 	width:800px;
-	background: radial-gradient(red, black);
+	background: radial-gradient(#e62e00, black);
 	height:auto;
 	margin-left:auto;
 	margin-right:auto;
@@ -90,6 +100,22 @@ a:hover {
 	
 	}
 	
+.article>.button {
+	color: white;
+	border-radius: 2px;
+	background-color: black;
+	width: 150px;
+    height: 40px;  
+	box-shadow:black 2px 5px 5px;
+	text-align:center;
+	letter-spacing:3px;
+	font-size:10px;
+	padding-top:10px;
+
+	
+	}
+	
+	
 
 	
 .article p {
@@ -97,6 +123,3 @@ a:hover {
 	font-size:13px;
 	}
 	
-.dopplers {
-	display:none;
-}

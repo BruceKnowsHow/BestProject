@@ -96,35 +96,19 @@
 				Welcome to Beachhacks! </p>
 			</div>
 			
-			<button onclick="increaseFont()">Increase Font</button>
-			<button onclick="document.getElementById('paragraph1').style.display = 'none'">Make it go away</button>
-			<button onclick="document.getElementById('paragraph1').style.display = 'block'">Make come back</button>
 			
-			<script>
-				function play1(){
-					var audio = document.getElementById("song1");
-					
-					setTimeout(alert(""), 2000);
-					setTimeout(song1.play(), 2000);
-				}
-				
-				function sayHi() {
-					alert('Hello');
-				}
-				
-				function sayHiHi() {
-					document.getElementById('paragraph1').style.display = 'none';
-				}
-				
-				function showBalls() {
-					document.getElementsByClassName('dopplers').style.display = 'block';
-				}
-		   </script>
+			<button class="button" onclick="increaseFont()">Increase Font</button>
+			<button class="button" onclick="document.getElementById('paragraph1').style.display = 'none'">Make it go away</button>
+			<button class="button" onclick="document.getElementById('paragraph1').style.display = 'block'">Make come back</button>
+			<button class="button" id="mapID" onclick="map()"> MAP</button>
+			
+			
+			
+		  
 		   
-		   <input type="button" value="PLAY" onclick="play1()">
 		</div>
 		
-		<div class= "article" id="verygoodid">
+		<div class= "article" >
 			hey </p>
 			<br>
 			<img class="dopplers" id="pic1" src="./images/drop1.gif" height="100" width="100"> </img>
@@ -135,9 +119,9 @@
 			<img class="dopplers" id="pic6" src="./images/drop1.gif" height="100" width="100"> </img>
 			<img class="dopplers" id="pic7" src="./images/drop1.gif" height="100" width="100"> </img>
 			
-			<button onclick="document.getElementById('pic1').src='./images/drop2.gif'">Turn off the light</button>
-			<button onclick="document.getElementById('pic4').src='./images/drop2.gif'">Turn off the light</button>
-			<button onclick="document.getElementById('pic7').src='./images/drop2.gif'">Turn off the light</button>
+			<button class="button" onclick="document.getElementById('pic1').src='./images/drop2.gif'">Turn off the light</button>
+			<button class="button" onclick="document.getElementById('pic4').src='./images/drop2.gif'">Turn off the light</button>
+			<button class="button" onclick="document.getElementById('pic7').src='./images/drop2.gif'">Turn off the light</button>
 			
 			
 		</div>
@@ -145,8 +129,14 @@
 		
 		<div class="content-wrapper" id="main-wrapper">
 			<ul>
-				<p> hey </p>
-			</ul>			
+				<p>  </p>
+			</ul>	
+			<p> Music: 
+				<audio id="song1" controls>
+				<source src="./audio/song1.mp3" type="audio/mp3">
+				</audio>
+			</p>
+
 		</div>
 		<!-- Scripts (JavaScript) -->
 		<script src="./js/script.js"></script>
@@ -251,7 +241,6 @@
 			0%  {-webkit-transform: rotate(-360deg);}
 			100% {-webkit-transform: rotate(0deg);}   
 		}
-</style>
 		</style>
 		
 	</body>
