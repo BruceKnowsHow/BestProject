@@ -37,7 +37,7 @@
 		<script>
 			window.addEventListener("load", function() {
 				document.body.className = "";
-				var scroll = 1000;
+				var scroll = 0;
 				window.addEventListener("scroll", function(event) {
 					scroll = Math.min(document.body.parentElement.scrollTop / (window.innerHeight * 5), 1);
 					update({});
